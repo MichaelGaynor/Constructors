@@ -1,0 +1,23 @@
+<script type="text/javascript">
+  
+function Player(name, position, avgM, avgP, avgR, starter, species = "Human"){
+  this.name = name;
+  this.position = position;
+  this.avgM = avgM;
+  this.avgP = avgP;
+  this.avgR = avgR;
+  this.starter = starter;
+  this.species = species;
+
+  this.reportPPM = function(){
+    var ppm = this.avgP/this.avgM;
+    return ppm;
+  }
+}
+
+var player1 = new Player("Gary Oldman","Actor",60,10,5,false);
+var player2 = new Player("Frank Castle","Character",120,100,1,false);
+var player3 = new Player("Christian Bale","Actor",80,9,6,false);
+console.log(player1.reportPPM());
+
+</script>
